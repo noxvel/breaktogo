@@ -7,11 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C04EE251BBB363500AECBB1 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04EE241BBB363500AECBB1 /* OptionsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4C04EE2F1BBB394A00AECBB1 /* pause_break_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C04EE2A1BBB394A00AECBB1 /* pause_break_normal.png */; settings = {ASSET_TAGS = (); }; };
+		4C04EE301BBB394A00AECBB1 /* pause_work_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C04EE2B1BBB394A00AECBB1 /* pause_work_normal.png */; settings = {ASSET_TAGS = (); }; };
+		4C04EE311BBB394A00AECBB1 /* play_break_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C04EE2C1BBB394A00AECBB1 /* play_break_normal.png */; settings = {ASSET_TAGS = (); }; };
+		4C04EE321BBB394A00AECBB1 /* play_work_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C04EE2D1BBB394A00AECBB1 /* play_work_normal.png */; settings = {ASSET_TAGS = (); }; };
+		4C04EE331BBB394A00AECBB1 /* progress-bar-start-fill.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C04EE2E1BBB394A00AECBB1 /* progress-bar-start-fill.png */; settings = {ASSET_TAGS = (); }; };
+		4C04EE351BBB39B000AECBB1 /* TimerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04EE341BBB39B000AECBB1 /* TimerData.swift */; settings = {ASSET_TAGS = (); }; };
+		4C04EE371BBB39E700AECBB1 /* TimeCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04EE361BBB39E700AECBB1 /* TimeCircle.swift */; settings = {ASSET_TAGS = (); }; };
+		4C04EE391BBB3A9600AECBB1 /* GeneralProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04EE381BBB3A9600AECBB1 /* GeneralProgressView.swift */; settings = {ASSET_TAGS = (); }; };
+		4C04EE3B1BBB3B1F00AECBB1 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04EE3A1BBB3B1F00AECBB1 /* TimerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4C1B32651BB9E103002A1AA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B32641BB9E103002A1AA0 /* AppDelegate.swift */; };
-		4C1B32671BB9E103002A1AA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B32661BB9E103002A1AA0 /* ViewController.swift */; };
 		4C1B32691BB9E103002A1AA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1B32681BB9E103002A1AA0 /* Assets.xcassets */; };
 		4C1B326C1BB9E103002A1AA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1B326A1BB9E103002A1AA0 /* Main.storyboard */; };
 		4C1B32771BB9E103002A1AA0 /* BreakToGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B32761BB9E103002A1AA0 /* BreakToGoTests.swift */; };
+		4CFAB0831BBB3D6E00C6C190 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAB0821BBB3D6E00C6C190 /* ContainerViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4CFAB0851BBB3D7C00C6C190 /* CrossfadeStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAB0841BBB3D7C00C6C190 /* CrossfadeStoryboardSegue.swift */; settings = {ASSET_TAGS = (); }; };
+		4CFAB0871BBB3FCC00C6C190 /* discard_timer_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CFAB0861BBB3FCC00C6C190 /* discard_timer_normal.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,15 +37,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C04EE241BBB363500AECBB1 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		4C04EE2A1BBB394A00AECBB1 /* pause_break_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause_break_normal.png; sourceTree = "<group>"; };
+		4C04EE2B1BBB394A00AECBB1 /* pause_work_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause_work_normal.png; sourceTree = "<group>"; };
+		4C04EE2C1BBB394A00AECBB1 /* play_break_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_break_normal.png; sourceTree = "<group>"; };
+		4C04EE2D1BBB394A00AECBB1 /* play_work_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_work_normal.png; sourceTree = "<group>"; };
+		4C04EE2E1BBB394A00AECBB1 /* progress-bar-start-fill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "progress-bar-start-fill.png"; sourceTree = "<group>"; };
+		4C04EE341BBB39B000AECBB1 /* TimerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerData.swift; sourceTree = "<group>"; };
+		4C04EE361BBB39E700AECBB1 /* TimeCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeCircle.swift; sourceTree = "<group>"; };
+		4C04EE381BBB3A9600AECBB1 /* GeneralProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralProgressView.swift; sourceTree = "<group>"; };
+		4C04EE3A1BBB3B1F00AECBB1 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		4C1B32611BB9E103002A1AA0 /* BreakToGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakToGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1B32641BB9E103002A1AA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C1B32661BB9E103002A1AA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4C1B32681BB9E103002A1AA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C1B326B1BB9E103002A1AA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C1B326D1BB9E103002A1AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C1B32721BB9E103002A1AA0 /* BreakToGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreakToGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1B32761BB9E103002A1AA0 /* BreakToGoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakToGoTests.swift; sourceTree = "<group>"; };
 		4C1B32781BB9E103002A1AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CFAB0821BBB3D6E00C6C190 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		4CFAB0841BBB3D7C00C6C190 /* CrossfadeStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossfadeStoryboardSegue.swift; sourceTree = "<group>"; };
+		4CFAB0861BBB3FCC00C6C190 /* discard_timer_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discard_timer_normal.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +78,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C04EE261BBB37E700AECBB1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C04EE341BBB39B000AECBB1 /* TimerData.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4C04EE271BBB380400AECBB1 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				4CFAB0821BBB3D6E00C6C190 /* ContainerViewController.swift */,
+				4C04EE241BBB363500AECBB1 /* OptionsViewController.swift */,
+				4C04EE3A1BBB3B1F00AECBB1 /* TimerViewController.swift */,
+			);
+			name = GUI;
+			sourceTree = "<group>";
+		};
+		4C04EE281BBB38C300AECBB1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4CFAB0861BBB3FCC00C6C190 /* discard_timer_normal.png */,
+				4C04EE2A1BBB394A00AECBB1 /* pause_break_normal.png */,
+				4C04EE2B1BBB394A00AECBB1 /* pause_work_normal.png */,
+				4C04EE2C1BBB394A00AECBB1 /* play_break_normal.png */,
+				4C04EE2D1BBB394A00AECBB1 /* play_work_normal.png */,
+				4C04EE2E1BBB394A00AECBB1 /* progress-bar-start-fill.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		4C04EE291BBB391700AECBB1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C04EE361BBB39E700AECBB1 /* TimeCircle.swift */,
+				4C04EE381BBB3A9600AECBB1 /* GeneralProgressView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		4C1B32581BB9E103002A1AA0 = {
 			isa = PBXGroup;
 			children = (
@@ -75,10 +139,14 @@
 		4C1B32631BB9E103002A1AA0 /* BreakToGo */ = {
 			isa = PBXGroup;
 			children = (
+				4C04EE291BBB391700AECBB1 /* Views */,
+				4C04EE281BBB38C300AECBB1 /* Images */,
+				4C04EE271BBB380400AECBB1 /* GUI */,
+				4C04EE261BBB37E700AECBB1 /* Model */,
 				4C1B32641BB9E103002A1AA0 /* AppDelegate.swift */,
-				4C1B32661BB9E103002A1AA0 /* ViewController.swift */,
-				4C1B32681BB9E103002A1AA0 /* Assets.xcassets */,
+				4CFAB0841BBB3D7C00C6C190 /* CrossfadeStoryboardSegue.swift */,
 				4C1B326A1BB9E103002A1AA0 /* Main.storyboard */,
+				4C1B32681BB9E103002A1AA0 /* Assets.xcassets */,
 				4C1B326D1BB9E103002A1AA0 /* Info.plist */,
 			);
 			path = BreakToGo;
@@ -173,6 +241,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C04EE301BBB394A00AECBB1 /* pause_work_normal.png in Resources */,
+				4C04EE331BBB394A00AECBB1 /* progress-bar-start-fill.png in Resources */,
+				4C04EE321BBB394A00AECBB1 /* play_work_normal.png in Resources */,
+				4C04EE311BBB394A00AECBB1 /* play_break_normal.png in Resources */,
+				4C04EE2F1BBB394A00AECBB1 /* pause_break_normal.png in Resources */,
+				4CFAB0871BBB3FCC00C6C190 /* discard_timer_normal.png in Resources */,
 				4C1B32691BB9E103002A1AA0 /* Assets.xcassets in Resources */,
 				4C1B326C1BB9E103002A1AA0 /* Main.storyboard in Resources */,
 			);
@@ -192,8 +266,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C1B32671BB9E103002A1AA0 /* ViewController.swift in Sources */,
+				4C04EE391BBB3A9600AECBB1 /* GeneralProgressView.swift in Sources */,
+				4CFAB0831BBB3D6E00C6C190 /* ContainerViewController.swift in Sources */,
+				4C04EE371BBB39E700AECBB1 /* TimeCircle.swift in Sources */,
+				4C04EE3B1BBB3B1F00AECBB1 /* TimerViewController.swift in Sources */,
 				4C1B32651BB9E103002A1AA0 /* AppDelegate.swift in Sources */,
+				4C04EE251BBB363500AECBB1 /* OptionsViewController.swift in Sources */,
+				4CFAB0851BBB3D7C00C6C190 /* CrossfadeStoryboardSegue.swift in Sources */,
+				4C04EE351BBB39B000AECBB1 /* TimerData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +456,7 @@
 				4C1B327D1BB9E103002A1AA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C1B327E1BB9E103002A1AA0 /* Build configuration list for PBXNativeTarget "BreakToGoTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +465,7 @@
 				4C1B32801BB9E103002A1AA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
