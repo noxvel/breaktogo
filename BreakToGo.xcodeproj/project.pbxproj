@@ -24,6 +24,8 @@
 		4CFAB0831BBB3D6E00C6C190 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAB0821BBB3D6E00C6C190 /* ContainerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4CFAB0851BBB3D7C00C6C190 /* CrossfadeStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAB0841BBB3D7C00C6C190 /* CrossfadeStoryboardSegue.swift */; settings = {ASSET_TAGS = (); }; };
 		4CFAB0871BBB3FCC00C6C190 /* discard_timer_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CFAB0861BBB3FCC00C6C190 /* discard_timer_normal.png */; settings = {ASSET_TAGS = (); }; };
+		4CFF09B51BBDDC8100003209 /* timer_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CFF09B41BBDDC8100003209 /* timer_circle.png */; settings = {ASSET_TAGS = (); }; };
+		4CFF09B71BBDDC9C00003209 /* settings_hover.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CFF09B61BBDDC9C00003209 /* settings_hover.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		4CFAB0821BBB3D6E00C6C190 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		4CFAB0841BBB3D7C00C6C190 /* CrossfadeStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossfadeStoryboardSegue.swift; sourceTree = "<group>"; };
 		4CFAB0861BBB3FCC00C6C190 /* discard_timer_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discard_timer_normal.png; sourceTree = "<group>"; };
+		4CFF09B41BBDDC8100003209 /* timer_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timer_circle.png; sourceTree = "<group>"; };
+		4CFF09B61BBDDC9C00003209 /* settings_hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_hover.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,9 @@
 			children = (
 				4CFAB0861BBB3FCC00C6C190 /* discard_timer_normal.png */,
 				4C04EE2A1BBB394A00AECBB1 /* pause_break_normal.png */,
+				4CFF09B61BBDDC9C00003209 /* settings_hover.png */,
 				4C04EE2B1BBB394A00AECBB1 /* pause_work_normal.png */,
+				4CFF09B41BBDDC8100003209 /* timer_circle.png */,
 				4C04EE2C1BBB394A00AECBB1 /* play_break_normal.png */,
 				4C04EE2D1BBB394A00AECBB1 /* play_work_normal.png */,
 				4C04EE2E1BBB394A00AECBB1 /* progress-bar-start-fill.png */,
@@ -244,7 +250,9 @@
 				4C04EE301BBB394A00AECBB1 /* pause_work_normal.png in Resources */,
 				4C04EE331BBB394A00AECBB1 /* progress-bar-start-fill.png in Resources */,
 				4C04EE321BBB394A00AECBB1 /* play_work_normal.png in Resources */,
+				4CFF09B71BBDDC9C00003209 /* settings_hover.png in Resources */,
 				4C04EE311BBB394A00AECBB1 /* play_break_normal.png in Resources */,
+				4CFF09B51BBDDC8100003209 /* timer_circle.png in Resources */,
 				4C04EE2F1BBB394A00AECBB1 /* pause_break_normal.png in Resources */,
 				4CFAB0871BBB3FCC00C6C190 /* discard_timer_normal.png in Resources */,
 				4C1B32691BB9E103002A1AA0 /* Assets.xcassets in Resources */,

@@ -668,7 +668,7 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController storyboardIdentifier="containerViewController" id="XfG-lQ-9wD" customClass="ContainerViewController" customModule="BreakToGo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
@@ -681,37 +681,271 @@
         <scene sceneID="wGp-RO-m48">
             <objects>
                 <viewController identifier="options" storyboardIdentifier="destinationViewController" id="B9Y-UH-Su3" customClass="OptionsViewController" customModule="BreakToGo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="KuR-VQ-RHr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="520"/>
+                    <view key="view" wantsLayer="YES" id="KuR-VQ-RHr">
+                        <rect key="frame" x="0.0" y="0.0" width="380" height="520"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lhf-71-sHa">
-                                <rect key="frame" x="270" y="436" width="82" height="32"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sjH-gQ-cjL">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sds-xJ-g3r">
+                                <rect key="frame" x="42" y="434" width="85" height="26"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Work Time" id="ntK-jK-oyd">
                                     <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g2v-08-dYY">
+                                <rect key="frame" x="167" y="434" width="107" height="26"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Work Repeats" id="Uam-oI-xdD">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ee-Ps-Hea">
+                                <rect key="frame" x="44" y="405" width="55" height="29"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="H1l-o2-oGL">
+                                    <numberFormatter key="formatter" formatterBehavior="custom10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="1" id="9fI-Ii-nLb">
+                                        <real key="minimum" value="0.10000000000000001"/>
+                                        <real key="maximum" value="999"/>
+                                    </numberFormatter>
+                                    <font key="font" size="18" name=".HelveticaNeueDeskInterface-Regular"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="imH-Ph-9H5">
+                                <rect key="frame" x="169" y="405" width="38" height="29"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="IGi-hc-V6Z">
+                                    <numberFormatter key="formatter" formatterBehavior="custom10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" id="UqK-gq-nFO">
+                                        <real key="minimum" value="1"/>
+                                        <real key="maximum" value="99"/>
+                                    </numberFormatter>
+                                    <font key="font" size="18" name=".HelveticaNeueDeskInterface-Regular"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e5S-RX-MzR">
+                                <rect key="frame" x="42" y="333" width="89" height="23"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Short Break" id="P5p-0w-h19">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hYo-2r-90V">
+                                <rect key="frame" x="258" y="339" width="111" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Long Break After" id="dAX-3e-AM0">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6sW-6l-gYJ">
+                                <rect key="frame" x="150" y="333" width="92" height="23"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Long Break" id="d1q-LS-Qe1">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WPE-8y-dd2">
+                                <rect key="frame" x="37" y="474" width="127" height="26"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Time Settings" id="dEa-i9-U9h">
+                                    <font key="font" size="17" name="Helvetica"/>
+                                    <color key="textColor" red="0.37254901960784315" green="0.5607843137254902" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="qts-Kf-YXz">
+                                <rect key="frame" x="20" y="472" width="335" height="5"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lhf-71-sHa">
+                                <rect key="frame" x="40" y="19" width="300" height="60"/>
+                                <buttonCell key="cell" type="smallSquare" title="Save Changes" bezelStyle="smallSquare" alignment="center" borderStyle="border" inset="2" id="sjH-gQ-cjL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="15" name=".HelveticaNeueDeskInterface-Regular"/>
                                 </buttonCell>
                                 <connections>
                                     <segue destination="M2b-Rp-Bl8" kind="custom" customClass="CrossfadeStoryboardSegue" customModule="BreakToGo" customModuleProvider="target" id="P7q-1h-x8P"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NNM-sb-eWO">
+                                <rect key="frame" x="213" y="405" width="73" height="26"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Repeats" id="9eZ-DK-boT">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HNP-le-yFk">
+                                <rect key="frame" x="105" y="405" width="31" height="26"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="min" id="0i2-9X-VUo">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eko-G8-AK7">
+                                <rect key="frame" x="103" y="305" width="33" height="23"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="min" id="GLD-Nu-E2M">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X8T-iA-7jh">
+                                <rect key="frame" x="213" y="305" width="29" height="23"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="min" id="N20-6X-Phh">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAl-1g-XCe">
+                                <rect key="frame" x="300" y="305" width="111" height="23"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Repeats" id="Iyt-sf-7CC">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uKB-QS-dKO">
+                                <rect key="frame" x="260" y="302" width="38" height="29"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="n0m-h6-bjN">
+                                    <numberFormatter key="formatter" formatterBehavior="custom10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" id="G3P-kc-qfi">
+                                        <real key="minimum" value="1"/>
+                                        <real key="maximum" value="99"/>
+                                    </numberFormatter>
+                                    <font key="font" size="18" name=".HelveticaNeueDeskInterface-Regular"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Pn-Vb-mQZ">
+                                <rect key="frame" x="44" y="302" width="55" height="29"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="3BY-mN-jz6">
+                                    <numberFormatter key="formatter" formatterBehavior="custom10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="1" id="j5e-aL-gHG">
+                                        <real key="minimum" value="0.10000000000000001"/>
+                                        <real key="maximum" value="999"/>
+                                    </numberFormatter>
+                                    <font key="font" size="18" name=".HelveticaNeueDeskInterface-Regular"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mvN-Vl-8gs">
+                                <rect key="frame" x="152" y="302" width="55" height="29"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="7VJ-xw-iiJ">
+                                    <numberFormatter key="formatter" formatterBehavior="custom10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="1" id="zqh-Fq-npe">
+                                        <real key="minimum" value="0.10000000000000001"/>
+                                        <real key="maximum" value="999"/>
+                                    </numberFormatter>
+                                    <font key="font" size="18" name=".HelveticaNeueDeskInterface-Regular"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="longBreak" destination="mvN-Vl-8gs" id="npq-Yd-evT"/>
+                        <outlet property="longBreakAfter" destination="uKB-QS-dKO" id="hFQ-CH-Quf"/>
+                        <outlet property="shortBreak" destination="4Pn-Vb-mQZ" id="oOl-DH-Usz"/>
+                        <outlet property="workRepeats" destination="imH-Ph-9H5" id="wKa-5z-uJb"/>
+                        <outlet property="workTime" destination="2ee-Ps-Hea" id="Loy-pj-Su3"/>
+                    </connections>
                 </viewController>
                 <customObject id="Aif-ko-DOE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1165" y="479"/>
+            <point key="canvasLocation" x="1164" y="479"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="g9n-i7-scv">
             <objects>
                 <viewController identifier="timer" storyboardIdentifier="sourceViewController" id="M2b-Rp-Bl8" customClass="TimerViewController" customModule="BreakToGo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="Vvh-Hl-HOd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="520"/>
+                    <view key="view" wantsLayer="YES" id="Vvh-Hl-HOd">
+                        <rect key="frame" x="0.0" y="0.0" width="380" height="520"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TD8-wo-G8a" customClass="TimeCircle" customModule="BreakToGo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="150" width="340" height="350"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m8q-cx-8gh">
+                                        <rect key="frame" x="99" y="216" width="137" height="38"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Work time" id="BdX-u5-1pt">
+                                            <font key="font" size="24" name="Helvetica"/>
+                                            <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cmr-hg-kUH">
+                                        <rect key="frame" x="0.0" y="271" width="60" height="60"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="settings_hover" imagePosition="only" alignment="center" inset="2" id="Dbg-RT-TSO">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <segue destination="B9Y-UH-Su3" kind="custom" customClass="CrossfadeStoryboardSegue" customModule="BreakToGo" customModuleProvider="target" id="pN2-5P-tbx"/>
+                                        </connections>
+                                    </button>
+                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f1V-Fb-reh">
+                                        <rect key="frame" x="275" y="271" width="60" height="60"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="play_work_normal" imagePosition="overlaps" alignment="left" inset="2" id="Kna-wM-q3i">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="playTimer:" target="M2b-Rp-Bl8" id="Nbc-V3-fSG"/>
+                                        </connections>
+                                    </button>
+                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agy-80-byZ">
+                                        <rect key="frame" x="151" y="318" width="32" height="32"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="discard_timer_normal" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="dYN-9C-Kgf">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="discardTimer:" target="M2b-Rp-Bl8" id="u57-2A-Tq8"/>
+                                        </connections>
+                                    </button>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g3P-rE-Ex6">
+                                        <rect key="frame" x="60" y="118" width="220" height="98"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="00:00" id="njf-Ku-nEU">
+                                            <font key="font" size="80" name="Helvetica-Light"/>
+                                            <color key="textColor" red="0.3294117647" green="0.4941176471" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nS5-n6-Sc2" userLabel="Counter">
+                                        <rect key="frame" x="116" y="54" width="63" height="69"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="4at-6H-oV3">
+                                            <font key="font" size="50" name="Helvetica"/>
+                                            <color key="textColor" red="0.3294117647" green="0.4941176471" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wOF-hF-pjv" userLabel="Counter">
+                                        <rect key="frame" x="141" y="54" width="84" height="69"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="/6" id="77R-03-a2P">
+                                            <font key="font" size="50" name="Helvetica"/>
+                                            <color key="textColor" red="0.76078431369999999" green="0.76078431369999999" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                            </customView>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Qpm-dA-Gh2">
+                                <rect key="frame" x="20" y="129" width="340" height="9"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
                             <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tCx-Bx-wep" customClass="GeneralProgressView" customModule="BreakToGo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="25" width="335" height="91"/>
+                                <rect key="frame" x="20" y="20" width="340" height="91"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f3G-5P-0yx">
                                         <rect key="frame" x="18" y="54" width="140" height="25"/>
@@ -731,74 +965,8 @@
                                     </textField>
                                 </subviews>
                             </customView>
-                            <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TD8-wo-G8a" customClass="TimeCircle" customModule="BreakToGo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="150" width="335" height="350"/>
-                                <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g3P-rE-Ex6">
-                                        <rect key="frame" x="65" y="118" width="205" height="98"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="00:00" id="njf-Ku-nEU">
-                                            <font key="font" size="80" name="Helvetica-Light"/>
-                                            <color key="textColor" red="0.3294117647" green="0.4941176471" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nS5-n6-Sc2" userLabel="Counter">
-                                        <rect key="frame" x="112" y="50" width="63" height="69"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="4at-6H-oV3">
-                                            <font key="font" size="50" name="Helvetica"/>
-                                            <color key="textColor" red="0.3294117647" green="0.4941176471" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m8q-cx-8gh">
-                                        <rect key="frame" x="99" y="216" width="137" height="38"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Work time" id="BdX-u5-1pt">
-                                            <font key="font" size="24" name="Helvetica"/>
-                                            <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agy-80-byZ">
-                                        <rect key="frame" x="151" y="318" width="32" height="32"/>
-                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="discard_timer_normal" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="dYN-9C-Kgf">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="discardTimer:" target="M2b-Rp-Bl8" id="u57-2A-Tq8"/>
-                                        </connections>
-                                    </button>
-                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f1V-Fb-reh">
-                                        <rect key="frame" x="271" y="272" width="58" height="59"/>
-                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="play_work_normal" imagePosition="overlaps" alignment="left" inset="2" id="Kna-wM-q3i">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="playTimer:" target="M2b-Rp-Bl8" id="Nbc-V3-fSG"/>
-                                        </connections>
-                                    </button>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wOF-hF-pjv" userLabel="Counter">
-                                        <rect key="frame" x="137" y="50" width="84" height="69"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="/6" id="77R-03-a2P">
-                                            <font key="font" size="50" name="Helvetica"/>
-                                            <color key="textColor" red="0.76078431369999999" green="0.76078431369999999" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cmr-hg-kUH">
-                                        <rect key="frame" x="8" y="302" width="82" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dbg-RT-TSO">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <segue destination="B9Y-UH-Su3" kind="custom" customClass="CrossfadeStoryboardSegue" customModule="BreakToGo" customModuleProvider="target" id="pN2-5P-tbx"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </customView>
                         </subviews>
+                        <animations/>
                     </view>
                     <connections>
                         <outlet property="allAmountOfRepeats" destination="wOF-hF-pjv" id="mS4-d1-hB3"/>
@@ -813,11 +981,12 @@
                 </viewController>
                 <customObject id="zIn-BY-x7e" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597.5" y="487"/>
+            <point key="canvasLocation" x="597" y="487"/>
         </scene>
     </scenes>
     <resources>
         <image name="discard_timer_normal" width="32" height="32"/>
         <image name="play_work_normal" width="58" height="59"/>
+        <image name="settings_hover" width="60" height="60"/>
     </resources>
 </document>

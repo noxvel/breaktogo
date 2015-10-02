@@ -28,7 +28,7 @@ class CrossfadeStoryboardSegue: NSStoryboardSegue {
         let containerViewController = sourceViewController.parentViewController!
         
 
-        print(sourceViewController.className)
+        //print(sourceViewController.className)
         
         containerViewController.insertChildViewController(destinationViewController, atIndex: 1)
         

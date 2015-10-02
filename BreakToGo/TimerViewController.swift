@@ -25,7 +25,7 @@ class TimerViewController: NSViewController {
     
     
     var timer: NSTimer?
-    var dataForTimer = TimerData()
+    var dataForTimer: TimerData?
     
     var devideCircle: Float = 0.0
     var devideAllTime: Double = 0.0
@@ -51,13 +51,36 @@ class TimerViewController: NSViewController {
         //self.progressLine.drawRect(NSRect())
         
         //self.view.addSubview(circleSub)
+        if self.dataForTimer == nil{
+            self.dataForTimer = TimerData()
+        }
         
-        devideCircle = 1.0 / Float(dataForTimer.workTime)
-        devideAllTime = 1.0 / dataForTimer.allTime
-        allAmountOfRepeats.stringValue = "/" + String(dataForTimer.workRepeats)
+        devideCircle = 1.0 / Float(self.dataForTimer!.workTime)
+        devideAllTime = 1.0 / self.dataForTimer!.allTime
+        allAmountOfRepeats.stringValue = "/" + String(self.dataForTimer!.workRepeats)
         
-        
+        //self.view.layer?.backgroundColor = NSColor.whiteColor().CGColor
   
+    }
+    
+    override func viewWillAppear() {
+        if let data = self.representedObject as? TimerData{
+            self.dataForTimer = data
+            
+            devideCircle = 1.0 / Float(self.dataForTimer!.workTime)
+            devideAllTime = 1.0 / self.dataForTimer!.allTime
+            allAmountOfRepeats.stringValue = "/" + String(self.dataForTimer!.workRepeats)
+        }//else{
+         //   dataForTimer = TimerData()
+        //}
+        self.view.layer?.backgroundColor = NSColor.whiteColor().CGColor
+    }
+    
+    
+    override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
+        let optionsView = segue.destinationController as! OptionsViewController
+        
+        optionsView.representedObject = self.dataForTimer
     }
     
     
@@ -65,14 +88,15 @@ class TimerViewController: NSViewController {
     let pauseWorkImage =  NSImage(named:"pause_work_normal.png")
     let playBreakImage = NSImage(named: "play_break_normal.png")
     let pauseBreakImage = NSImage(named: "pause_break_normal.png")
-    
+    let workColor = NSColor(red: CGFloat(186.0/255.0), green: CGFloat(201.0/255.0), blue: CGFloat(55.0/255.0), alpha: CGFloat(1.0))
+    let breakColor = NSColor(red: CGFloat(110.0/255.0), green: CGFloat(141.0/255.0), blue: CGFloat(224.0/255.0), alpha: CGFloat(1.0))
     
     
     
     @IBAction func playTimer(sender: AnyObject) {
 
         //let devideCircle: Double = 1.0/dataForTimer.workTime
-        genProgressPercentBar = progressLine.xProgressBar / CGFloat(dataForTimer.allTime)
+        genProgressPercentBar = progressLine.xProgressBar / CGFloat(dataForTimer!.allTime)
         currentAmountOfRepeats.stringValue = String(amountOfRepeats)
         
         if(workOrBreak){
@@ -112,6 +136,10 @@ class TimerViewController: NSViewController {
         genProgressPercentBar = 0.0
         progressLine.progressLine.strokeEnd = 0.0
         circle.progressCircle.strokeEnd = 0.0
+        //
+        circle.progressStamp.strokeStart = 0.0
+        circle.progressStamp.strokeEnd = 0.002
+        //
         amountOfRepeats = 1
         progressLine.pinLayer.position.x = progressLine.xProgressBarBegin
         self.timerLabel.stringValue = "00:00"
@@ -125,7 +153,7 @@ class TimerViewController: NSViewController {
             timer?.invalidate()
             timer = nil
             
-            if amountOfRepeats >= dataForTimer.workRepeats{
+            if amountOfRepeats >= dataForTimer!.workRepeats{
                 return
             }
             
@@ -133,24 +161,42 @@ class TimerViewController: NSViewController {
                 workOrBreak = false
                 self.startButtonOutlet.image = pauseBreakImage
                 timerLabelText = 1.0
+                //
+                circle.progressStamp.strokeStart = 0.0
+                circle.progressStamp.strokeEnd = 0.002
+                //
                 circle.progressCircle.strokeEnd = 0.0
-                circle.progressCircle.strokeColor = NSColor(red: CGFloat(186.0/255.0), green: CGFloat(201.0/255.0), blue: CGFloat(55.0/255.0), alpha: CGFloat(1.0)).CGColor
-                self.timerLabel.textColor = NSColor(red: CGFloat(186.0/255.0), green: CGFloat(201.0/255.0), blue: CGFloat(55.0/255.0), alpha: CGFloat(1.0))
+                circle.progressCircle.strokeColor = workColor.CGColor
+                circle.progressStamp.strokeColor = workColor.CGColor
+                self.timerLabel.textColor = workColor
                 self.timerLabel.stringValue = "00:00"
                 self.workOrBreakLabel.stringValue = "Break Time"
                 
-                devideCircle = 1.0 / Float(dataForTimer.shortBreak)
+                if self.amountOfRepeats % (dataForTimer?.longBreakAfter)! == 0{
+                    devideCircle = 1.0 / Float(dataForTimer!.longBreak)
+                }else{
+                    devideCircle = 1.0 / Float(dataForTimer!.shortBreak)
+                }
+                
+                print(self.amountOfRepeats % (dataForTimer?.longBreakAfter)!)
+                
+                
             }else{
                 workOrBreak = true
                 self.startButtonOutlet.image = pauseWorkImage
                 timerLabelText = 1.0
+                //
+                circle.progressStamp.strokeStart = 0.0
+                circle.progressStamp.strokeEnd = 0.002
+                //
                 circle.progressCircle.strokeEnd = 0.0
-                circle.progressCircle.strokeColor = NSColor(red: CGFloat(110.0/255.0), green: CGFloat(141.0/255.0), blue: CGFloat(224.0/255.0), alpha: CGFloat(1.0)).CGColor
-                self.timerLabel.textColor = NSColor(red: CGFloat(110.0/255.0), green: CGFloat(141.0/255.0), blue: CGFloat(224.0/255.0), alpha: CGFloat(1.0))
+                circle.progressCircle.strokeColor = breakColor.CGColor
+                circle.progressStamp.strokeColor = breakColor.CGColor
+                self.timerLabel.textColor = breakColor
                 self.timerLabel.stringValue = "00:00"
                 self.workOrBreakLabel.stringValue = "Work Time"
                 
-                devideCircle = 1.0 / Float(dataForTimer.workTime)
+                devideCircle = 1.0 / Float(dataForTimer!.workTime)
                 currentAmountOfRepeats.stringValue = String(++amountOfRepeats)
             }
             
@@ -160,17 +206,18 @@ class TimerViewController: NSViewController {
         }
         else{
             //print(devideCircle)
-            
             //circle.progressCircle.strokeEnd += CGFloat((timer?.userInfo)! as! NSNumber)
             
             circle.progressCircle.strokeEnd += CGFloat(devideCircle)
             progressLine.progressLine.strokeEnd += CGFloat(devideAllTime)
+            //
+            circle.progressStamp.strokeStart += CGFloat(devideCircle)
+            circle.progressStamp.strokeEnd += CGFloat(devideCircle)
+            //
             progressLine.pinLayer.position.x += CGFloat(genProgressPercentBar)
-            
             genProgressPercentText += devideAllTime
             self.timerLabel.stringValue = stringFromTimeInterval(timerLabelText++) as String
             self.genProgressPercent.stringValue = String(format: "%d%%", Int(floor(genProgressPercentText * 100)))
-        
         }
         
     }
@@ -190,8 +237,8 @@ class TimerViewController: NSViewController {
 
     }
     
+    
 }
-
 
 
 //Test BezierPath class

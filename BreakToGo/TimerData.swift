@@ -15,14 +15,28 @@ class TimerData: NSObject {
     var longBreak: Double
     var longBreakAfter: Int
     var allTime: Double
+    var amountOfLongBreaks : Int
     
     override init() {
-        self.workTime = 1.0 * 15
-        self.workRepeats = 3
-        self.shortBreak = 1.0 * 5
-        self.longBreak = 1.0 * 60
-        self.longBreakAfter = 3
-        self.allTime = self.workTime * Double(self.workRepeats) + self.shortBreak * (Double(self.workRepeats) - 1)
+        self.workTime = 0.4 * 60.0
+        self.workRepeats = 5
+        self.shortBreak = 0.125 * 60.0
+        self.longBreak = 0.25 * 60.0
+        self.longBreakAfter = 2
+        self.amountOfLongBreaks = self.workRepeats / self.longBreakAfter
+        self.allTime = self.workTime * Double(self.workRepeats) + Double(self.amountOfLongBreaks) * self.longBreak +
+            self.shortBreak * (Double(self.workRepeats - amountOfLongBreaks) - 1)
+    }
+    
+    init(workTimeSec: Double, workRepeats: Int, shortBreakSec: Double, longBreakSec: Double, longBreakAfter: Int){
+        self.workTime = workTimeSec * 60
+        self.workRepeats = workRepeats
+        self.shortBreak = shortBreakSec * 60
+        self.longBreak = longBreakSec * 60
+        self.longBreakAfter = longBreakAfter
+        self.amountOfLongBreaks = self.workRepeats / self.longBreakAfter
+        self.allTime = self.workTime * Double(self.workRepeats) + Double(self.amountOfLongBreaks) * self.longBreak +
+            self.shortBreak * (Double(self.workRepeats - amountOfLongBreaks) - 1)
     }
     
 }
