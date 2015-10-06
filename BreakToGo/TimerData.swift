@@ -39,4 +39,28 @@ class TimerData: NSObject {
             self.shortBreak * (Double(self.workRepeats - amountOfLongBreaks) - 1)
     }
     
+    required convenience init(coder decoder: NSCoder){
+        self.init()
+        self.workTime = decoder.decodeObjectForKey("workTime") as! Double
+        self.workRepeats = decoder.decodeObjectForKey("workRepeats") as! Int
+        self.shortBreak = decoder.decodeObjectForKey("shortBreak") as! Double
+        self.longBreak = decoder.decodeObjectForKey("longBreak") as! Double
+        self.longBreakAfter = decoder.decodeObjectForKey("longBreakAfter") as! Int
+        self.amountOfLongBreaks = self.workRepeats / self.longBreakAfter
+        self.allTime = self.workTime * Double(self.workRepeats) + Double(self.amountOfLongBreaks) * self.longBreak +
+            self.shortBreak * (Double(self.workRepeats - amountOfLongBreaks) - 1)
+    }
+    
+}
+
+extension TimerData: NSCoding{
+    func encodeWithCoder(coder: NSCoder) {
+        coder.encodeObject(self.workTime, forKey: "workTime")
+        coder.encodeObject(self.workRepeats, forKey: "workRepeats")
+        coder.encodeObject(self.shortBreak, forKey: "shortBreak")
+        coder.encodeObject(self.longBreak, forKey: "longBreak")
+        coder.encodeObject(self.longBreakAfter, forKey: "longBreakAfter")
+        coder.encodeObject(self.allTime, forKey: "allTime")
+        coder.encodeObject(self.amountOfLongBreaks, forKey: "amountOfLongBreaks")
+    }
 }

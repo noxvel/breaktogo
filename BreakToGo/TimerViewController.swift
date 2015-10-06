@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import QuartzCore
 import AppKit
 
 class TimerViewController: NSViewController {
@@ -51,9 +50,13 @@ class TimerViewController: NSViewController {
         //self.progressLine.drawRect(NSRect())
         
         //self.view.addSubview(circleSub)
-        if self.dataForTimer == nil{
+        
+        if let data = NSUserDefaults.standardUserDefaults().objectForKey("timerData") as? NSData {
+            self.dataForTimer = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? TimerData
+        } else if self.dataForTimer == nil{
             self.dataForTimer = TimerData()
         }
+    
         
         devideCircle = 1.0 / Float(self.dataForTimer!.workTime)
         devideAllTime = 1.0 / self.dataForTimer!.allTime
@@ -88,8 +91,8 @@ class TimerViewController: NSViewController {
     let pauseWorkImage =  NSImage(named:"pause_work_normal.png")
     let playBreakImage = NSImage(named: "play_break_normal.png")
     let pauseBreakImage = NSImage(named: "pause_break_normal.png")
-    let workColor = NSColor(red: CGFloat(186.0/255.0), green: CGFloat(201.0/255.0), blue: CGFloat(55.0/255.0), alpha: CGFloat(1.0))
-    let breakColor = NSColor(red: CGFloat(110.0/255.0), green: CGFloat(141.0/255.0), blue: CGFloat(224.0/255.0), alpha: CGFloat(1.0))
+    let breakColor = NSColor(red: CGFloat(186.0/255.0), green: CGFloat(201.0/255.0), blue: CGFloat(55.0/255.0), alpha: CGFloat(1.0))
+    let workColor = NSColor(red: CGFloat(110.0/255.0), green: CGFloat(141.0/255.0), blue: CGFloat(224.0/255.0), alpha: CGFloat(1.0))
     
     
     
@@ -140,6 +143,12 @@ class TimerViewController: NSViewController {
         circle.progressStamp.strokeStart = 0.0
         circle.progressStamp.strokeEnd = 0.002
         //
+        workOrBreak = true
+        devideCircle = 1.0 / Float(dataForTimer!.workTime)
+        circle.progressCircle.strokeColor = workColor.CGColor
+        circle.progressStamp.strokeColor = workColor.CGColor
+        self.timerLabel.textColor = workColor
+        //
         amountOfRepeats = 1
         progressLine.pinLayer.position.x = progressLine.xProgressBarBegin
         self.timerLabel.stringValue = "00:00"
@@ -166,9 +175,9 @@ class TimerViewController: NSViewController {
                 circle.progressStamp.strokeEnd = 0.002
                 //
                 circle.progressCircle.strokeEnd = 0.0
-                circle.progressCircle.strokeColor = workColor.CGColor
-                circle.progressStamp.strokeColor = workColor.CGColor
-                self.timerLabel.textColor = workColor
+                circle.progressCircle.strokeColor = breakColor.CGColor
+                circle.progressStamp.strokeColor = breakColor.CGColor
+                self.timerLabel.textColor = breakColor
                 self.timerLabel.stringValue = "00:00"
                 self.workOrBreakLabel.stringValue = "Break Time"
                 
@@ -190,9 +199,9 @@ class TimerViewController: NSViewController {
                 circle.progressStamp.strokeEnd = 0.002
                 //
                 circle.progressCircle.strokeEnd = 0.0
-                circle.progressCircle.strokeColor = breakColor.CGColor
-                circle.progressStamp.strokeColor = breakColor.CGColor
-                self.timerLabel.textColor = breakColor
+                circle.progressCircle.strokeColor = workColor.CGColor
+                circle.progressStamp.strokeColor = workColor.CGColor
+                self.timerLabel.textColor = workColor
                 self.timerLabel.stringValue = "00:00"
                 self.workOrBreakLabel.stringValue = "Work Time"
                 

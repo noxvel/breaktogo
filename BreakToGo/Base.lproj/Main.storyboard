@@ -708,8 +708,8 @@
                                         <real key="minimum" value="0.10000000000000001"/>
                                         <real key="maximum" value="999"/>
                                     </numberFormatter>
-                                    <font key="font" size="18" name=".HelveticaNeueDeskInterface-Regular"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="font" size="18" name="Helvetica-Light"/>
+                                    <color key="textColor" red="0.49019607843137253" green="0.49019607843137253" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -720,8 +720,8 @@
                                         <real key="minimum" value="1"/>
                                         <real key="maximum" value="99"/>
                                     </numberFormatter>
-                                    <font key="font" size="18" name=".HelveticaNeueDeskInterface-Regular"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="font" size="18" name="Helvetica-Light"/>
+                                    <color key="textColor" red="0.49019607843137253" green="0.49019607843137253" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -763,16 +763,6 @@
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>
                             </box>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lhf-71-sHa">
-                                <rect key="frame" x="40" y="19" width="300" height="60"/>
-                                <buttonCell key="cell" type="smallSquare" title="Save Changes" bezelStyle="smallSquare" alignment="center" borderStyle="border" inset="2" id="sjH-gQ-cjL">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="15" name=".HelveticaNeueDeskInterface-Regular"/>
-                                </buttonCell>
-                                <connections>
-                                    <segue destination="M2b-Rp-Bl8" kind="custom" customClass="CrossfadeStoryboardSegue" customModule="BreakToGo" customModuleProvider="target" id="P7q-1h-x8P"/>
-                                </connections>
-                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NNM-sb-eWO">
                                 <rect key="frame" x="213" y="405" width="73" height="26"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Repeats" id="9eZ-DK-boT">
@@ -820,8 +810,8 @@
                                         <real key="minimum" value="1"/>
                                         <real key="maximum" value="99"/>
                                     </numberFormatter>
-                                    <font key="font" size="18" name=".HelveticaNeueDeskInterface-Regular"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="font" size="18" name="Helvetica-Light"/>
+                                    <color key="textColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -832,8 +822,8 @@
                                         <real key="minimum" value="0.10000000000000001"/>
                                         <real key="maximum" value="999"/>
                                     </numberFormatter>
-                                    <font key="font" size="18" name=".HelveticaNeueDeskInterface-Regular"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="font" size="18" name="Helvetica-Light"/>
+                                    <color key="textColor" red="0.49019607843137253" green="0.49019607843137253" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -844,16 +834,27 @@
                                         <real key="minimum" value="0.10000000000000001"/>
                                         <real key="maximum" value="999"/>
                                     </numberFormatter>
-                                    <font key="font" size="18" name=".HelveticaNeueDeskInterface-Regular"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="font" size="18" name="Helvetica-Light"/>
+                                    <color key="textColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lhf-71-sHa" customClass="RoundedSaveButton" customModule="BreakToGo" customModuleProvider="target">
+                                <rect key="frame" x="35" y="20" width="311" height="50"/>
+                                <buttonCell key="cell" type="square" title="Save Changes" bezelStyle="shadowlessSquare" alignment="center" state="on" inset="2" id="sjH-gQ-cjL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="14" name="Helvetica"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="M2b-Rp-Bl8" kind="custom" customClass="CrossfadeStoryboardSegue" customModule="BreakToGo" customModuleProvider="target" id="P7q-1h-x8P"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="longBreak" destination="mvN-Vl-8gs" id="npq-Yd-evT"/>
                         <outlet property="longBreakAfter" destination="uKB-QS-dKO" id="hFQ-CH-Quf"/>
+                        <outlet property="saveButton" destination="Lhf-71-sHa" id="Mah-Wv-s70"/>
                         <outlet property="shortBreak" destination="4Pn-Vb-mQZ" id="oOl-DH-Usz"/>
                         <outlet property="workRepeats" destination="imH-Ph-9H5" id="wKa-5z-uJb"/>
                         <outlet property="workTime" destination="2ee-Ps-Hea" id="Loy-pj-Su3"/>
@@ -915,23 +916,23 @@
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g3P-rE-Ex6">
                                         <rect key="frame" x="60" y="118" width="220" height="98"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="00:00" id="njf-Ku-nEU">
-                                            <font key="font" size="80" name="Helvetica-Light"/>
+                                            <font key="font" size="80" name="HelveticaNeue-Thin"/>
                                             <color key="textColor" red="0.3294117647" green="0.4941176471" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nS5-n6-Sc2" userLabel="Counter">
-                                        <rect key="frame" x="116" y="54" width="63" height="69"/>
+                                        <rect key="frame" x="113" y="55" width="63" height="69"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="4at-6H-oV3">
-                                            <font key="font" size="50" name="Helvetica"/>
+                                            <font key="font" size="50" name="HelveticaNeue-Light"/>
                                             <color key="textColor" red="0.3294117647" green="0.4941176471" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wOF-hF-pjv" userLabel="Counter">
-                                        <rect key="frame" x="141" y="54" width="84" height="69"/>
+                                        <rect key="frame" x="138" y="55" width="84" height="69"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="/6" id="77R-03-a2P">
-                                            <font key="font" size="50" name="Helvetica"/>
+                                            <font key="font" size="50" name="HelveticaNeue-Light"/>
                                             <color key="textColor" red="0.76078431369999999" green="0.76078431369999999" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -939,7 +940,7 @@
                                 </subviews>
                             </customView>
                             <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Qpm-dA-Gh2">
-                                <rect key="frame" x="20" y="129" width="340" height="9"/>
+                                <rect key="frame" x="20" y="129" width="340" height="5"/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>
