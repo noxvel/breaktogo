@@ -16,6 +16,7 @@ class TimerData: NSObject {
     var longBreakAfter: Int
     var allTime: Double
     var amountOfLongBreaks : Int
+    var notificationSound: Int
     
     override init() {
         self.workTime = 0.4 * 60.0
@@ -26,9 +27,10 @@ class TimerData: NSObject {
         self.amountOfLongBreaks = self.workRepeats / self.longBreakAfter
         self.allTime = self.workTime * Double(self.workRepeats) + Double(self.amountOfLongBreaks) * self.longBreak +
             self.shortBreak * (Double(self.workRepeats - amountOfLongBreaks) - 1)
+        self.notificationSound = 1
     }
     
-    init(workTimeSec: Double, workRepeats: Int, shortBreakSec: Double, longBreakSec: Double, longBreakAfter: Int){
+    init(workTimeSec: Double, workRepeats: Int, shortBreakSec: Double, longBreakSec: Double, longBreakAfter: Int, notificationSound: Int){
         self.workTime = workTimeSec * 60
         self.workRepeats = workRepeats
         self.shortBreak = shortBreakSec * 60
@@ -37,6 +39,7 @@ class TimerData: NSObject {
         self.amountOfLongBreaks = self.workRepeats / self.longBreakAfter
         self.allTime = self.workTime * Double(self.workRepeats) + Double(self.amountOfLongBreaks) * self.longBreak +
             self.shortBreak * (Double(self.workRepeats - amountOfLongBreaks) - 1)
+        self.notificationSound = notificationSound
     }
     
     required convenience init(coder decoder: NSCoder){
@@ -49,6 +52,7 @@ class TimerData: NSObject {
         self.amountOfLongBreaks = self.workRepeats / self.longBreakAfter
         self.allTime = self.workTime * Double(self.workRepeats) + Double(self.amountOfLongBreaks) * self.longBreak +
             self.shortBreak * (Double(self.workRepeats - amountOfLongBreaks) - 1)
+        self.notificationSound = decoder.decodeObjectForKey("notificationSound") as! Int
     }
     
 }
@@ -62,5 +66,6 @@ extension TimerData: NSCoding{
         coder.encodeObject(self.longBreakAfter, forKey: "longBreakAfter")
         coder.encodeObject(self.allTime, forKey: "allTime")
         coder.encodeObject(self.amountOfLongBreaks, forKey: "amountOfLongBreaks")
+        coder.encodeObject(self.notificationSound, forKey: "notificationSound")
     }
 }

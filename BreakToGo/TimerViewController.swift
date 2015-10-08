@@ -25,6 +25,7 @@ class TimerViewController: NSViewController {
     
     var timer: NSTimer?
     var dataForTimer: TimerData?
+    var notification: NSUserNotification?
     
     var devideCircle: Float = 0.0
     var devideAllTime: Double = 0.0
@@ -41,15 +42,16 @@ class TimerViewController: NSViewController {
         // Do view setup here.
         
         //self.circle = NSView(frame: CGRectMake(0,0, 300, 100))
-    
         //self.circle.drawRect(NSRect())
         //circleSub.wantsLayer = true
-        
-        
         //self.circle.drawRect(NSRect())
         //self.progressLine.drawRect(NSRect())
-        
         //self.view.addSubview(circleSub)
+        
+        
+        // Delete all data from NSUserDefaults
+        //var appDomain : NSString = NSBundle.mainBundle().bundleIdentifier!
+        //NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain as String)
         
         if let data = NSUserDefaults.standardUserDefaults().objectForKey("timerData") as? NSData {
             self.dataForTimer = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? TimerData
@@ -63,6 +65,16 @@ class TimerViewController: NSViewController {
         allAmountOfRepeats.stringValue = "/" + String(self.dataForTimer!.workRepeats)
         
         //self.view.layer?.backgroundColor = NSColor.whiteColor().CGColor
+        
+        // Set sound notification
+        notification = NSUserNotification()
+        if self.dataForTimer?.notificationSound == 1{
+            notification!.soundName = NSUserNotificationDefaultSoundName
+        }else{
+            notification!.soundName = nil
+        }
+        
+        
   
     }
     
@@ -186,8 +198,12 @@ class TimerViewController: NSViewController {
                 }else{
                     devideCircle = 1.0 / Float(dataForTimer!.shortBreak)
                 }
+
+                // Notification setup
+                notification!.title = "Break Time"
+                notification!.informativeText = "It's time to have some rest"
+                NSUserNotificationCenter.defaultUserNotificationCenter().deliverNotification(self.notification!)
                 
-                print(self.amountOfRepeats % (dataForTimer?.longBreakAfter)!)
                 
                 
             }else{
@@ -207,6 +223,12 @@ class TimerViewController: NSViewController {
                 
                 devideCircle = 1.0 / Float(dataForTimer!.workTime)
                 currentAmountOfRepeats.stringValue = String(++amountOfRepeats)
+                
+                // Notification setup
+                notification!.title = "Work Time"
+                notification!.informativeText = "It's time back to work"
+                NSUserNotificationCenter.defaultUserNotificationCenter().deliverNotification(self.notification!)
+                
             }
             
             if timer == nil{

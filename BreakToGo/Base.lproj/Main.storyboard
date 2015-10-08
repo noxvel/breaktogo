@@ -758,7 +758,7 @@
                                 </textFieldCell>
                             </textField>
                             <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="qts-Kf-YXz">
-                                <rect key="frame" x="20" y="472" width="335" height="5"/>
+                                <rect key="frame" x="25" y="472" width="330" height="5"/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>
@@ -849,12 +849,47 @@
                                     <segue destination="M2b-Rp-Bl8" kind="custom" customClass="CrossfadeStoryboardSegue" customModule="BreakToGo" customModuleProvider="target" id="P7q-1h-x8P"/>
                                 </connections>
                             </button>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Y7d-0x-ZHF">
+                                <rect key="frame" x="35" y="236" width="310" height="5"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0u1-bT-TEL">
+                                <rect key="frame" x="37" y="238" width="127" height="26"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Notification" id="HUO-Hn-H84">
+                                    <font key="font" size="17" name="Helvetica"/>
+                                    <color key="textColor" red="0.37254901959999998" green="0.56078431370000004" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="SmQ-c4-GwG">
+                                <rect key="frame" x="25" y="236" width="330" height="5"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RSJ-PZ-d9U">
+                                <rect key="frame" x="37" y="185" width="164" height="23"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Notification Sound" placeholderString="fdsf" id="p9K-ot-Lxt">
+                                    <font key="font" size="17" name=".HelveticaNeueDeskInterface-Regular"/>
+                                    <color key="textColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LyT-Nd-rNh">
+                                <rect key="frame" x="325" y="183" width="32" height="27"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="only" state="on" inset="2" id="ylD-PZ-AYg">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="longBreak" destination="mvN-Vl-8gs" id="npq-Yd-evT"/>
                         <outlet property="longBreakAfter" destination="uKB-QS-dKO" id="hFQ-CH-Quf"/>
-                        <outlet property="saveButton" destination="Lhf-71-sHa" id="Mah-Wv-s70"/>
+                        <outlet property="notificationSound" destination="LyT-Nd-rNh" id="FF5-jE-yWg"/>
                         <outlet property="shortBreak" destination="4Pn-Vb-mQZ" id="oOl-DH-Usz"/>
                         <outlet property="workRepeats" destination="imH-Ph-9H5" id="wKa-5z-uJb"/>
                         <outlet property="workTime" destination="2ee-Ps-Hea" id="Loy-pj-Su3"/>
@@ -940,7 +975,7 @@
                                 </subviews>
                             </customView>
                             <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Qpm-dA-Gh2">
-                                <rect key="frame" x="20" y="129" width="340" height="5"/>
+                                <rect key="frame" x="20" y="129" width="340" height="4"/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>
