@@ -17,6 +17,7 @@ class TimerData: NSObject {
     var allTime: Double
     var amountOfLongBreaks : Int
     var notificationSound: Int
+    var launchMenubar: Int
     
     override init() {
         self.workTime = 0.4 * 60.0
@@ -28,9 +29,10 @@ class TimerData: NSObject {
         self.allTime = self.workTime * Double(self.workRepeats) + Double(self.amountOfLongBreaks) * self.longBreak +
             self.shortBreak * (Double(self.workRepeats - amountOfLongBreaks) - 1)
         self.notificationSound = 1
+        self.launchMenubar = 0
     }
     
-    init(workTimeSec: Double, workRepeats: Int, shortBreakSec: Double, longBreakSec: Double, longBreakAfter: Int, notificationSound: Int){
+    init(workTimeSec: Double, workRepeats: Int, shortBreakSec: Double, longBreakSec: Double, longBreakAfter: Int, notificationSound: Int, launchMenubar: Int){
         self.workTime = workTimeSec * 60
         self.workRepeats = workRepeats
         self.shortBreak = shortBreakSec * 60
@@ -40,6 +42,7 @@ class TimerData: NSObject {
         self.allTime = self.workTime * Double(self.workRepeats) + Double(self.amountOfLongBreaks) * self.longBreak +
             self.shortBreak * (Double(self.workRepeats - amountOfLongBreaks) - 1)
         self.notificationSound = notificationSound
+        self.launchMenubar = launchMenubar
     }
     
     required convenience init(coder decoder: NSCoder){
@@ -53,6 +56,7 @@ class TimerData: NSObject {
         self.allTime = self.workTime * Double(self.workRepeats) + Double(self.amountOfLongBreaks) * self.longBreak +
             self.shortBreak * (Double(self.workRepeats - amountOfLongBreaks) - 1)
         self.notificationSound = decoder.decodeObjectForKey("notificationSound") as! Int
+        self.launchMenubar = decoder.decodeObjectForKey("launchMenubar") as! Int
     }
     
 }
@@ -67,5 +71,6 @@ extension TimerData: NSCoding{
         coder.encodeObject(self.allTime, forKey: "allTime")
         coder.encodeObject(self.amountOfLongBreaks, forKey: "amountOfLongBreaks")
         coder.encodeObject(self.notificationSound, forKey: "notificationSound")
+        coder.encodeObject(self.launchMenubar, forKey: "launchMenubar")
     }
 }

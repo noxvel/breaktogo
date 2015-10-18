@@ -122,7 +122,7 @@ class TimerViewController: NSViewController {
             }else if self.startButtonOutlet.image?.name() == "play_work_normal"{
                 self.startButtonOutlet.image = pauseWorkImage
                 if timer == nil{
-                    timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "update", userInfo: nil, repeats: true)
+                    timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "update", userInfo: nil, repeats: true)
                 }
             }
         }else{
@@ -133,7 +133,7 @@ class TimerViewController: NSViewController {
             }else if self.startButtonOutlet.image?.name() == "play_break_normal"{
                 self.startButtonOutlet.image = pauseBreakImage
                 if timer == nil{
-                    timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "update", userInfo: nil, repeats: true)
+                    timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "update", userInfo: nil, repeats: true)
                 }
             }
         }
@@ -175,6 +175,7 @@ class TimerViewController: NSViewController {
             timer = nil
             
             if amountOfRepeats >= dataForTimer!.workRepeats{
+                self.workOrBreakLabel.stringValue = "You're all set"
                 return
             }
             
@@ -232,7 +233,7 @@ class TimerViewController: NSViewController {
             }
             
             if timer == nil{
-                timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "update", userInfo: nil, repeats: true)
+                timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "update", userInfo: nil, repeats: true)
             }
         }
         else{

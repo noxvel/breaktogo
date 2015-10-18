@@ -689,7 +689,7 @@
                                 <rect key="frame" x="42" y="434" width="85" height="26"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Work Time" id="ntK-jK-oyd">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" red="0.12395438759999999" green="0.12395438759999999" blue="0.12395438759999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -697,7 +697,7 @@
                                 <rect key="frame" x="167" y="434" width="107" height="26"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Work Repeats" id="Uam-oI-xdD">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" red="0.12395438759999999" green="0.12395438759999999" blue="0.12395438759999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -729,7 +729,7 @@
                                 <rect key="frame" x="42" y="333" width="89" height="23"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Short Break" id="P5p-0w-h19">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" red="0.12395438762626265" green="0.12395438762626265" blue="0.12395438762626265" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -737,7 +737,7 @@
                                 <rect key="frame" x="258" y="339" width="111" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Long Break After" id="dAX-3e-AM0">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" red="0.12395438759999999" green="0.12395438759999999" blue="0.12395438759999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -745,7 +745,7 @@
                                 <rect key="frame" x="150" y="333" width="92" height="23"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Long Break" id="d1q-LS-Qe1">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" red="0.12395438759999999" green="0.12395438759999999" blue="0.12395438759999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -758,7 +758,7 @@
                                 </textFieldCell>
                             </textField>
                             <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="qts-Kf-YXz">
-                                <rect key="frame" x="25" y="472" width="330" height="5"/>
+                                <rect key="frame" x="25" y="472" width="330" height="4"/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>
@@ -767,7 +767,7 @@
                                 <rect key="frame" x="213" y="405" width="73" height="26"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Repeats" id="9eZ-DK-boT">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" red="0.12395438759999999" green="0.12395438759999999" blue="0.12395438759999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -775,7 +775,7 @@
                                 <rect key="frame" x="105" y="405" width="31" height="26"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="min" id="0i2-9X-VUo">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" red="0.12395438759999999" green="0.12395438759999999" blue="0.12395438759999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -783,7 +783,7 @@
                                 <rect key="frame" x="103" y="305" width="33" height="23"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="min" id="GLD-Nu-E2M">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" red="0.12395438759999999" green="0.12395438759999999" blue="0.12395438759999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -791,7 +791,7 @@
                                 <rect key="frame" x="213" y="305" width="29" height="23"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="min" id="N20-6X-Phh">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" red="0.12395438759999999" green="0.12395438759999999" blue="0.12395438759999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -799,7 +799,7 @@
                                 <rect key="frame" x="300" y="305" width="111" height="23"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Repeats" id="Iyt-sf-7CC">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" red="0.12395438759999999" green="0.12395438759999999" blue="0.12395438759999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -869,17 +869,40 @@
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>
                             </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTT-eD-5aW">
+                                <rect key="frame" x="37" y="133" width="185" height="23"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Launch on Menu Bar" placeholderString="" id="xxD-ZO-I5D">
+                                    <font key="font" size="17" name=".HelveticaNeueDeskInterface-Regular"/>
+                                    <color key="textColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RSJ-PZ-d9U">
                                 <rect key="frame" x="37" y="185" width="164" height="23"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Notification Sound" placeholderString="fdsf" id="p9K-ot-Lxt">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Notification Sound" placeholderString="" id="p9K-ot-Lxt">
                                     <font key="font" size="17" name=".HelveticaNeueDeskInterface-Regular"/>
+                                    <color key="textColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dd6-b5-nag">
+                                <rect key="frame" x="328" y="133" width="27" height="24"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="overlaps" state="on" inset="2" id="lQ3-2u-2jS">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J7H-gD-szo">
+                                <rect key="frame" x="37" y="112" width="285" height="23"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="(Reopen application to activate this option)" placeholderString="" id="ZyL-Ha-eIq">
+                                    <font key="font" size="14" name=".HelveticaNeueDeskInterface-Regular"/>
                                     <color key="textColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LyT-Nd-rNh">
                                 <rect key="frame" x="325" y="183" width="32" height="27"/>
-                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="only" state="on" inset="2" id="ylD-PZ-AYg">
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="overlaps" state="on" inset="2" id="ylD-PZ-AYg">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -887,6 +910,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="launchMenubar" destination="Dd6-b5-nag" id="M8a-aN-Obd"/>
                         <outlet property="longBreak" destination="mvN-Vl-8gs" id="npq-Yd-evT"/>
                         <outlet property="longBreakAfter" destination="uKB-QS-dKO" id="hFQ-CH-Quf"/>
                         <outlet property="notificationSound" destination="LyT-Nd-rNh" id="FF5-jE-yWg"/>
@@ -903,7 +927,7 @@
         <scene sceneID="g9n-i7-scv">
             <objects>
                 <viewController identifier="timer" storyboardIdentifier="sourceViewController" id="M2b-Rp-Bl8" customClass="TimerViewController" customModule="BreakToGo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="Vvh-Hl-HOd">
+                    <view key="view" id="Vvh-Hl-HOd">
                         <rect key="frame" x="0.0" y="0.0" width="380" height="520"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -911,7 +935,7 @@
                                 <rect key="frame" x="20" y="150" width="340" height="350"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m8q-cx-8gh">
-                                        <rect key="frame" x="99" y="216" width="137" height="38"/>
+                                        <rect key="frame" x="87" y="216" width="166" height="38"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Work time" id="BdX-u5-1pt">
                                             <font key="font" size="24" name="Helvetica"/>
                                             <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -939,7 +963,7 @@
                                         </connections>
                                     </button>
                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agy-80-byZ">
-                                        <rect key="frame" x="151" y="318" width="32" height="32"/>
+                                        <rect key="frame" x="154" y="318" width="32" height="32"/>
                                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="discard_timer_normal" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="dYN-9C-Kgf">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -957,7 +981,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nS5-n6-Sc2" userLabel="Counter">
-                                        <rect key="frame" x="113" y="55" width="63" height="69"/>
+                                        <rect key="frame" x="116" y="59" width="63" height="69"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="4at-6H-oV3">
                                             <font key="font" size="50" name="HelveticaNeue-Light"/>
                                             <color key="textColor" red="0.3294117647" green="0.4941176471" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -965,7 +989,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wOF-hF-pjv" userLabel="Counter">
-                                        <rect key="frame" x="138" y="55" width="84" height="69"/>
+                                        <rect key="frame" x="147" y="59" width="84" height="69"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="/6" id="77R-03-a2P">
                                             <font key="font" size="50" name="HelveticaNeue-Light"/>
                                             <color key="textColor" red="0.76078431369999999" green="0.76078431369999999" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>

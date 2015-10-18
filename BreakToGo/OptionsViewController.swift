@@ -18,6 +18,7 @@ class OptionsViewController: NSViewController {
     @IBOutlet weak var longBreak: NSTextField!
     @IBOutlet weak var longBreakAfter: NSTextField!
     @IBOutlet weak var notificationSound: NSButton!
+    @IBOutlet weak var launchMenubar: NSButton!
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
         let timerView = segue.destinationController as! TimerViewController
@@ -50,6 +51,7 @@ class OptionsViewController: NSViewController {
             longBreak.doubleValue = self.data!.longBreak / 60
             longBreakAfter.integerValue = self.data!.longBreakAfter
             notificationSound.integerValue = self.data!.notificationSound
+            launchMenubar.integerValue = self.data!.launchMenubar
         }
         self.view.layer?.backgroundColor = NSColor.whiteColor().CGColor
         //saveButton.layer?.backgroundColor = NSColor.greenColor().CGColor
@@ -64,7 +66,7 @@ class OptionsViewController: NSViewController {
     }
     
     func writeDataToObject(){
-        data = TimerData(workTimeSec: workTime.doubleValue, workRepeats: workRepeats.integerValue, shortBreakSec: shortBreak.doubleValue, longBreakSec: longBreak.doubleValue, longBreakAfter: longBreakAfter.integerValue, notificationSound: notificationSound.integerValue)
+        data = TimerData(workTimeSec: workTime.doubleValue, workRepeats: workRepeats.integerValue, shortBreakSec: shortBreak.doubleValue, longBreakSec: longBreak.doubleValue, longBreakAfter: longBreakAfter.integerValue, notificationSound: notificationSound.integerValue, launchMenubar: launchMenubar.integerValue)
     }
     
 }
