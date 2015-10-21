@@ -30,7 +30,7 @@ class TimerViewController: NSViewController {
     var devideCircle: Float = 0.0
     var devideAllTime: Double = 0.0
     var timerLabelText = 1.0
-    var genProgressPercentText: Double = 0.0
+    var genProgressPercentText: Float = 0.0
     var genProgressPercentBar: CGFloat = 0.0
     var amountOfRepeats:Int = 1
     
@@ -41,24 +41,33 @@ class TimerViewController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
         
-        //self.circle = NSView(frame: CGRectMake(0,0, 300, 100))
-        //self.circle.drawRect(NSRect())
-        //circleSub.wantsLayer = true
-        //self.circle.drawRect(NSRect())
-        //self.progressLine.drawRect(NSRect())
-        //self.view.addSubview(circleSub)
-        
-        
         // Delete all data from NSUserDefaults
-        //var appDomain : NSString = NSBundle.mainBundle().bundleIdentifier!
+        //let appDomain : NSString = NSBundle.mainBundle().bundleIdentifier!
         //NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain as String)
         
+        /*
         if let data = NSUserDefaults.standardUserDefaults().objectForKey("timerData") as? NSData {
             self.dataForTimer = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? TimerData
         } else if self.dataForTimer == nil{
             self.dataForTimer = TimerData()
+            self.dataForTimer!.initDefaultValues()
         }
+        */
+        
+  
+    }
     
+    override func viewWillAppear() {
+        
+        if let data = self.representedObject as? TimerData{
+            self.dataForTimer = data
+        }else if let saveData = NSUserDefaults.standardUserDefaults().objectForKey("timerData") as? NSData {
+            self.dataForTimer = NSKeyedUnarchiver.unarchiveObjectWithData(saveData) as? TimerData
+        }else if self.dataForTimer == nil{
+            self.dataForTimer = TimerData()
+            self.dataForTimer!.initDefaultValues()
+        }
+        self.view.layer?.backgroundColor = NSColor.whiteColor().CGColor
         
         devideCircle = 1.0 / Float(self.dataForTimer!.workTime)
         devideAllTime = 1.0 / self.dataForTimer!.allTime
@@ -73,22 +82,6 @@ class TimerViewController: NSViewController {
         }else{
             notification!.soundName = nil
         }
-        
-        
-  
-    }
-    
-    override func viewWillAppear() {
-        if let data = self.representedObject as? TimerData{
-            self.dataForTimer = data
-            
-            devideCircle = 1.0 / Float(self.dataForTimer!.workTime)
-            devideAllTime = 1.0 / self.dataForTimer!.allTime
-            allAmountOfRepeats.stringValue = "/" + String(self.dataForTimer!.workRepeats)
-        }//else{
-         //   dataForTimer = TimerData()
-        //}
-        self.view.layer?.backgroundColor = NSColor.whiteColor().CGColor
     }
     
     
@@ -96,6 +89,9 @@ class TimerViewController: NSViewController {
         let optionsView = segue.destinationController as! OptionsViewController
         
         optionsView.representedObject = self.dataForTimer
+        
+        timer?.invalidate()
+        timer = nil
     }
     
     
@@ -110,8 +106,11 @@ class TimerViewController: NSViewController {
     
     @IBAction func playTimer(sender: AnyObject) {
 
-        //let devideCircle: Double = 1.0/dataForTimer.workTime
+        /*
+        remove this declaring from this method
+        */
         genProgressPercentBar = progressLine.xProgressBar / CGFloat(dataForTimer!.allTime)
+        //
         currentAmountOfRepeats.stringValue = String(amountOfRepeats)
         
         if(workOrBreak){
@@ -175,6 +174,7 @@ class TimerViewController: NSViewController {
             timer = nil
             
             if amountOfRepeats >= dataForTimer!.workRepeats{
+                self.genProgressPercent.stringValue = "100%"
                 self.workOrBreakLabel.stringValue = "You're all set"
                 return
             }
@@ -233,11 +233,10 @@ class TimerViewController: NSViewController {
             }
             
             if timer == nil{
-                timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "update", userInfo: nil, repeats: true)
+                timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "update", userInfo: nil, repeats: true)
             }
         }
         else{
-            //print(devideCircle)
             //circle.progressCircle.strokeEnd += CGFloat((timer?.userInfo)! as! NSNumber)
             
             circle.progressCircle.strokeEnd += CGFloat(devideCircle)
@@ -247,9 +246,11 @@ class TimerViewController: NSViewController {
             circle.progressStamp.strokeEnd += CGFloat(devideCircle)
             //
             progressLine.pinLayer.position.x += CGFloat(genProgressPercentBar)
-            genProgressPercentText += devideAllTime
+            genProgressPercentText += Float(devideAllTime)
             self.timerLabel.stringValue = stringFromTimeInterval(timerLabelText++) as String
-            self.genProgressPercent.stringValue = String(format: "%d%%", Int(floor(genProgressPercentText * 100)))
+            self.genProgressPercent.stringValue = String(format: "%d%%", Int(genProgressPercentText * 100.0))
+            //print(genProgressPercentText)
+            //print(genProgressPercentText * 100.0)
         }
         
     }

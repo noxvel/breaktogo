@@ -32,6 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.dataForTimer = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? TimerData
         } else if self.dataForTimer == nil{
             self.dataForTimer = TimerData()
+            self.dataForTimer?.initDefaultValues()
         }
         
         if self.dataForTimer?.launchMenubar == 0 {
